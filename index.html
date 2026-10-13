@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小游戏合集 | 群友游戏厅</title>
+<meta name="description" content="群友的小游戏合集：抽卡、对战等原创离线小游戏，即点即玩。">
+<meta name="keywords" content="小游戏合集,群友抽卡,HTML5游戏,离线游戏">
+<link rel="icon" type="image/png" href="nailong.png">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    background: linear-gradient(160deg, #fff8e1 0%, #ffe9a8 55%, #ffd35c 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px 60px;
+  }
+  header { text-align: center; margin-bottom: 40px; }
+  header img { width: 110px; animation: float 3s ease-in-out infinite; }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  h1 {
+    margin-top: 10px;
+    font-size: clamp(26px, 5vw, 38px);
+    color: #5a4300;
+    letter-spacing: .15em;
+  }
+  .sub { margin-top: 8px; color: #9c7a00; font-size: 14px; letter-spacing: .25em; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+    gap: 26px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1080px;
+  }
+  a.card {
+    display: block;
+    background: #fffdf5;
+    border-radius: 20px;
+    padding: 26px 24px 22px;
+    text-decoration: none;
+    color: #4a3800;
+    box-shadow: 0 6px 18px rgba(140,100,0,.14);
+    border: 3px solid transparent;
+    transition: transform .15s, border-color .15s, box-shadow .15s;
+  }
+  a.card:hover {
+    transform: translateY(-6px) rotate(-.5deg);
+    border-color: #f6c344;
+    box-shadow: 0 12px 26px rgba(140,100,0,.22);
+  }
+  .cover {
+    height: 120px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    margin-bottom: 16px;
+  }
+  .cover.gacha { background: linear-gradient(135deg, #ffe3ec, #ffd0dd); }
+  .cover.more  { background: linear-gradient(135deg, #eceff4, #dbe2ec); }
+  .card h2 { font-size: 20px; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: #8a7a4a; line-height: 1.7; }
+  .tag {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 3px 12px;
+    font-size: 12px;
+    border-radius: 999px;
+    background: #ffedbf;
+    color: #9c6b00;
+  }
+  .tag.off { background: #d9ead3; color: #2d6a1e; }
+  .soon { opacity: .55; cursor: default; }
+  a.card.soon:hover { transform: none; border-color: transparent; box-shadow: 0 6px 18px rgba(140,100,0,.14); }
+  footer { margin-top: 50px; font-size: 13px; color: #b8942e; text-align: center; line-height: 2; }
+</style>
+</head>
+<body>
+  <header>
+    <img src="nailong.png" alt="奶龙">
+    <h1>群友游戏厅</h1>
+    <p class="sub">MINI GAMES · 全部免安装 · 点开就玩</p>
+  </header>
+
+  <div class="grid">
+    <a class="card" href="games/%E7%BE%A4%E5%8F%8B%E6%8A%BD%E5%8D%A1_v1.6.7_%E7%A6%BB%E7%BA%BF%E7%89%88.html">
+      <div class="cover gacha">🎰</div>
+      <h2>群友抽卡 v1.6.7</h2>
+      <p>离线单文件抽卡游戏：群友角色卡池、抽卡动画、奖励系统，不用联网也能玩。</p>
+      <span class="tag off">单机离线</span> <span class="tag">v1.6.7</span>
+    </a>
+    <div class="card soon">
+      <div class="cover more">📦</div>
+      <h2>更多游戏</h2>
+      <p>施工中……下一个游戏上架后就会出现在这里。</p>
+      <span class="tag">敬请期待</span>
+    </div>
+  </div>
+
+  <footer>
+    本站为个人兴趣小游戏合集 · 与任何商业 IP 无关<br>
+    <a href="https://mio-is-best.github.io/world-nailong-university/" style="color:#b8942e">← 返回世界奶龙大学</a>
+  </footer>
+</body>
+</html>
